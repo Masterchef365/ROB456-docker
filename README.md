@@ -8,7 +8,7 @@ The following command will build the Docker container. It is simply the default 
 ```
 
 ## Usage
-You may use the docker container just like a normal Linux install of ROS. For example, one can launch lab 1 like so:
+The script `ros_docker.sh` will launch the container we just built, with X11 (GUI) support enabled, and with the current directory mounted as the container's workspace. You may use the docker container just like a normal Linux install of ROS. For example, one can launch lab 1 like so:
 
 ```sh
 mkdir -p catkin_ws/src
@@ -20,3 +20,5 @@ source devel/setup.bash
 export TURTLEBOT3_MODEL=waffle
 roslaunch spin_wheels spin_wheels.launch
 ```
+
+If you need to, you can remove the `--rm` line from `ros_docker.sh` to get a persistent shell.
