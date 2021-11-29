@@ -22,3 +22,5 @@ roslaunch spin_wheels spin_wheels.launch
 ```
 
 If you need to, you can remove the `--rm` line from `ros_docker.sh` to get a persistent shell.
+
+If you need to open a second shell in the container, you can use `new_shell.sh`.

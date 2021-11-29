@@ -1,6 +1,8 @@
 # FROM http://wiki.ros.org/docker/Tutorials/GUI
 
 xhost + # Allow X11 connections
+
+# Use the non-modified docker image
 #docker run -it \
 #    --rm \ 
 #    --env="DISPLAY" \
@@ -9,6 +11,7 @@ xhost + # Allow X11 connections
 #    osrf/ros:melodic-desktop-full \
 #    $@
 
+# Use the modified docker image
 docker run -it \
     --rm \
     --env="DISPLAY" \
@@ -16,5 +19,6 @@ docker run -it \
     --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
     -v $PWD:/cwd \
     -w /cwd \
+    --name rob456_ros\
     melodic_ros_turtle \
     $@
