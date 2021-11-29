@@ -1,3 +1,8 @@
 # syntax=docker/dockerfile:1
 FROM osrf/ros:melodic-desktop-full
-RUN apt update && apt install -y ros-melodic-turtlebot3-* ros-melodic-navigation 
+RUN apt update &&\
+    apt install -y\
+    ros-melodic-turtlebot3-*\
+    ros-melodic-navigation\
+    ros-melodic-teleop-twist-keyboard\
+    ros-melodic-slam-gmapping
